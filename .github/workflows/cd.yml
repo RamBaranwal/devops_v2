@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: deploy to ec2
-              uses: aapleboy/ssh-action@v1.0.3
+              uses: appleboy/ssh-action@v0.1.5
               with:
                   host: ${{secrets.EC2_HOST}}
                   username: ${{secrets.EC2_USERNAME}}
