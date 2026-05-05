@@ -15,7 +15,7 @@ jobs:
                   host: ${{secrets.EC2_HOST}}
                   username: ${{secrets.EC2_USERNAME}}
                   key: ${{secrets.EC2_KEY}}
-                  script:
+                  script: |
                     docker pull rambaranwal/node-app:latest
                     docker rm -f node-app || true
                     docker run -d -p 4000:3000 --name node-app rambaranwal/node-app:latest
